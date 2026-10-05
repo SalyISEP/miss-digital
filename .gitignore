@@ -1,0 +1,41 @@
+# Environnement Python
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Base de données locale
+db.sqlite3
+db.sqlite3-journal
+
+# Fichiers de sauvegarde locaux
+*-backup*
+*backup*
+*.bak
+*.old
+
+# Django
+staticfiles/
+media/
+
+# IDE
+.vscode/
+.idea/
+
+# Système
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Tests / cache
+.pytest_cache/
+.coverage
+htmlcov/
+.production_secret_key

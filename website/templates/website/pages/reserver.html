@@ -1,0 +1,180 @@
+{% extends "website/base.html" %}
+
+{% block title %}Réserver une formation — Miss Digital Tech{% endblock %}
+
+{% block content %}
+
+<section class="reservation-page">
+
+    <div class="container">
+
+        <div class="reservation-intro">
+
+            <span>MDT ACADEMY</span>
+
+            <h1>
+                Réserver une<br>
+                <strong>formation.</strong>
+            </h1>
+
+            <p>
+                Choisissez votre formation, votre date souhaitée
+                et la durée. Envoyez votre demande et notre équipe
+                vous contactera pour confirmer les modalités.
+            </p>
+
+        </div>
+
+        <div class="reservation-box">
+
+            {% if success %}
+
+                <div class="reservation-success">
+
+                    <span>✓</span>
+
+                    <div>
+                        <h2>Demande reçue.</h2>
+
+                        <p>
+                            Merci pour votre demande de réservation.
+                            Miss Digital Tech vous contactera prochainement
+                            pour confirmer votre formation, la date et les modalités.
+                        </p>
+                    </div>
+
+                </div>
+
+            {% else %}
+
+                <form method="post" class="reservation-form">
+
+                    {% csrf_token %}
+
+                    {% if form.errors %}
+                        <div class="reservation-errors">
+                            <strong>Veuillez vérifier les informations saisies.</strong>
+                        </div>
+                    {% endif %}
+
+                    <div class="reservation-row">
+
+                        <div class="reservation-field">
+                            <label for="{{ form.nom.id_for_label }}">
+                                Nom complet
+                            </label>
+
+                            {{ form.nom }}
+
+                            {% if form.nom.errors %}
+                                <small>{{ form.nom.errors|striptags }}</small>
+                            {% endif %}
+                        </div>
+
+                        <div class="reservation-field">
+                            <label for="{{ form.email.id_for_label }}">
+                                E-mail
+                            </label>
+
+                            {{ form.email }}
+
+                            {% if form.email.errors %}
+                                <small>{{ form.email.errors|striptags }}</small>
+                            {% endif %}
+                        </div>
+
+                    </div>
+
+                    <div class="reservation-row">
+
+                        <div class="reservation-field">
+                            <label for="{{ form.telephone.id_for_label }}">
+                                Téléphone
+                            </label>
+
+                            {{ form.telephone }}
+                        </div>
+
+                        <div class="reservation-field">
+                            <label for="{{ form.formation.id_for_label }}">
+                                Formation souhaitée
+                            </label>
+
+                            {{ form.formation }}
+                        </div>
+
+                    </div>
+
+                    <div class="reservation-row">
+
+                        <div class="reservation-field">
+                            <label for="{{ form.date_souhaitee.id_for_label }}">
+                                Date souhaitée
+                            </label>
+
+                            {{ form.date_souhaitee }}
+                        </div>
+
+                        <div class="reservation-field">
+                            <label for="{{ form.duree.id_for_label }}">
+                                Durée de la formation
+                            </label>
+
+                            {{ form.duree }}
+                        </div>
+
+                    </div>
+
+                    <div class="reservation-row">
+
+                        <div class="reservation-field">
+                            <label for="{{ form.mode.id_for_label }}">
+                                Mode de formation
+                            </label>
+
+                            {{ form.mode }}
+                        </div>
+
+                        <div class="reservation-field">
+                            <label for="{{ form.nombre_participants.id_for_label }}">
+                                Nombre de participants
+                            </label>
+
+                            {{ form.nombre_participants }}
+                        </div>
+
+                    </div>
+
+                    <div class="reservation-field">
+
+                        <label for="{{ form.message.id_for_label }}">
+                            Informations complémentaires
+                        </label>
+
+                        {{ form.message }}
+
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="reservation-submit">
+
+                        <span>
+                            Envoyer ma réservation
+                        </span>
+
+                        <strong>→</strong>
+
+                    </button>
+
+                </form>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

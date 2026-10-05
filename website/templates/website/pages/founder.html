@@ -1,0 +1,157 @@
+{% extends "website/base.html" %}
+{% load static %}
+
+{% block title %}Fondatrice — Saly Dieng | Miss Digital Tech{% endblock %}
+
+{% block content %}
+
+<section class="founder-main">
+    <div class="container">
+
+        <div class="founder-hero-grid">
+
+            <div class="founder-photo">
+                <img
+                    src="{% static 'website/images/team/PhotoSaly.jpg' %}"
+                    alt="Saly Dieng — Fondatrice et CEO de Miss Digital Tech"
+                >
+            </div>
+
+            <div class="founder-intro">
+                <span>LA FONDATRICE</span>
+
+                <h1>
+                    Saly<br>
+                    <strong>Dieng</strong>
+                </h1>
+
+                <p class="founder-role">
+                    Fondatrice & CEO — Miss Digital Tech
+                </p>
+
+                <div class="founder-line"></div>
+
+                <p>
+                    Je suis Saly Dieng, développeuse Full Stack spécialisée
+                    dans la conception de solutions numériques et de projets web.
+                </p>
+
+                <p>
+                    À travers Miss Digital Tech, je souhaite mettre la technologie,
+                    la créativité et l'innovation au service des entreprises,
+                    entrepreneurs et professionnels.
+                </p>
+
+                <a href="{% url 'contact' %}" class="md-btn md-btn-dark">
+                    Échanger avec moi
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="founder-profile">
+
+            <div class="founder-profile-heading">
+                <span>MON PARCOURS</span>
+
+                <h2>
+                    La technologie,<br>
+                    mais aussi la vision.
+                </h2>
+            </div>
+
+            <div class="founder-profile-text">
+
+                <p>
+                    Mon parcours m'a permis de développer des compétences
+                    en développement web et applicatif, en conception d'API,
+                    en bases de données ainsi qu'en administration des systèmes
+                    et réseaux.
+                </p>
+
+                <p>
+                    Je m'intéresse particulièrement aux projets qui permettent
+                    de transformer une idée ou un besoin concret en une solution
+                    numérique simple, utile et professionnelle.
+                </p>
+
+                <p>
+                    Miss Digital Tech représente cette vision : créer un univers
+                    où la technologie, la communication, la formation et
+                    l'accompagnement peuvent répondre aux besoins réels
+                    des entreprises et des entrepreneurs.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="founder-skills">
+
+            <div>
+                <span>01</span>
+                <h3>Développement</h3>
+                <p>
+                    Python, Django, Java, Spring Boot, Angular,
+                    API REST, bases de données et développement web.
+                </p>
+            </div>
+
+            <div>
+                <span>02</span>
+                <h3>Solutions numériques</h3>
+                <p>
+                    Sites web, applications de gestion, e-commerce
+                    et outils numériques adaptés aux besoins.
+                </p>
+            </div>
+
+            <div>
+                <span>03</span>
+                <h3>Systèmes & réseaux</h3>
+                <p>
+                    Administration Windows et Linux, réseaux,
+                    virtualisation, sécurité et maintenance informatique.
+                </p>
+            </div>
+
+            <div>
+                <span>04</span>
+                <h3>Vision entrepreneuriale</h3>
+                <p>
+                    Construire une entreprise numérique sénégalaise
+                    ambitieuse, professionnelle et tournée vers l'avenir.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<section class="founder-quote">
+    <div class="container">
+
+        <span>MISS DIGITAL TECH</span>
+
+        <h2>
+            L'innovation au service<br>
+            de votre réussite.
+        </h2>
+
+        <p>
+            Une vision portée par la technologie,
+            la créativité et l'ambition.
+        </p>
+
+        <a href="{% url 'portfolio' %}" class="md-btn">
+            Découvrir mes projets
+        </a>
+
+    </div>
+</section>
+
+{% endblock %}

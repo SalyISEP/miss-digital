@@ -1,0 +1,104 @@
+{% extends "website/base.html" %}
+
+{% block title %}MD Show — Miss Digital Tech{% endblock %}
+
+{% block content %}
+
+<section class="show-hero">
+    <div class="container">
+
+        <span>MISS DIGITAL TECH SHOW</span>
+
+        <h1>
+            Les idées qui<br>
+            méritent d'être vues.
+        </h1>
+
+        <p>
+            MD Show met en lumière les projets, parcours, initiatives
+            et histoires qui contribuent à faire avancer l'univers
+            numérique et entrepreneurial.
+        </p>
+
+    </div>
+</section>
+
+<section class="show-content">
+    <div class="container">
+
+        <div class="show-intro">
+            <span>NOTRE FORMAT</span>
+
+            <h2>
+                Rencontrer.<br>
+                Échanger. Inspirer.
+            </h2>
+
+            <p>
+                Un espace dédié aux échanges autour du numérique,
+                de l'entrepreneuriat, de la créativité et des
+                parcours professionnels.
+            </p>
+        </div>
+
+        <div class="show-grid">
+
+            <article>
+                <span>01</span>
+                <h3>Interviews</h3>
+                <p>
+                    Rencontres avec des entrepreneurs, professionnels,
+                    créateurs et acteurs du numérique.
+                </p>
+            </article>
+
+            <article>
+                <span>02</span>
+                <h3>Découvertes</h3>
+                <p>
+                    Découverte de projets, initiatives et solutions
+                    qui méritent d'être mises en lumière.
+                </p>
+            </article>
+
+            <article>
+                <span>03</span>
+                <h3>Échanges</h3>
+                <p>
+                    Des conversations autour des expériences,
+                    défis et opportunités du monde professionnel.
+                </p>
+            </article>
+
+            <article>
+                <span>04</span>
+                <h3>Inspiration</h3>
+                <p>
+                    Des histoires et expériences destinées à encourager
+                    celles et ceux qui souhaitent entreprendre et créer.
+                </p>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="show-cta">
+    <div class="container">
+
+        <span>MD SHOW</span>
+
+        <h2>
+            Votre parcours peut<br>
+            inspirer quelqu'un.
+        </h2>
+
+        <a href="{% url 'contact' %}" class="md-btn md-btn-dark">
+            Proposer une collaboration
+        </a>
+
+    </div>
+</section>
+
+{% endblock %}

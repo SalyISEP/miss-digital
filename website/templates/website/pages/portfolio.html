@@ -1,0 +1,238 @@
+{% extends "website/base.html" %}
+{% load static %}
+
+{% block title %}Portfolio — Saly Dieng | Miss Digital Tech{% endblock %}
+
+{% block content %}
+
+<section class="my-portfolio-hero">
+    <div class="container">
+
+        <span>PORTFOLIO</span>
+
+        <h1>
+            Des idées.<br>
+            Des projets.<br>
+            Des solutions.
+        </h1>
+
+        <p>
+            Une sélection de projets développés autour du web,
+            des applications, de l'e-commerce et des solutions numériques.
+        </p>
+
+    </div>
+</section>
+
+
+<section class="my-portfolio-intro">
+    <div class="container">
+
+        <div class="my-portfolio-heading">
+
+            <span>MES RÉALISATIONS</span>
+
+            <h2>
+                Concevoir, développer<br>
+                et donner vie aux idées.
+            </h2>
+
+            <p>
+                Chaque projet représente une expérience concrète
+                dans la conception et le développement de solutions numériques.
+            </p>
+
+        </div>
+
+
+        <div class="my-projects">
+
+            <article class="my-project my-project-featured">
+
+                <div class="my-project-image">
+                    <img
+                        src="{% static 'website/images/projects/th (1).jpg' %}"
+                        alt="Baol Business"
+                    >
+                </div>
+
+                <div class="my-project-content">
+                    <span class="project-index">01</span>
+                    <span class="project-type">E-COMMERCE · FULL STACK</span>
+
+                    <h3>Baol Business</h3>
+
+                    <p>
+                        Application e-commerce développée avec Django
+                        et MySQL pour gérer les produits, variantes,
+                        stocks, panier, commandes et livraison.
+                    </p>
+
+                    <div class="project-technologies">
+                        <span>Django</span>
+                        <span>Python</span>
+                        <span>MySQL</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+
+            </article>
+
+
+            <article class="my-project">
+
+                <div class="my-project-image">
+                    <img
+                        src="{% static 'website/images/projects/th (2).jpg' %}"
+                        alt="Projet Woyofal Senelec"
+                    >
+                </div>
+
+                <div class="my-project-content">
+                    <span class="project-index">02</span>
+                    <span class="project-type">API · APPLICATION WEB</span>
+
+                    <h3>Woyofal / Senelec</h3>
+
+                    <p>
+                        Projet orienté API REST avec authentification JWT
+                        et intégration d'un assistant conversationnel
+                        Kocc Barma.
+                    </p>
+
+                    <div class="project-technologies">
+                        <span>API REST</span>
+                        <span>JWT</span>
+                        <span>Python</span>
+                        <span>Chatbot</span>
+                    </div>
+                </div>
+
+            </article>
+
+
+            <article class="my-project">
+
+                <div class="my-project-image">
+                    <img
+                        src="{% static 'website/images/projects/th (4).jpg' %}"
+                        alt="HamadyTech"
+                    >
+                </div>
+
+                <div class="my-project-content">
+                    <span class="project-index">03</span>
+                    <span class="project-type">E-COMMERCE · FULL STACK</span>
+
+                    <h3>HamadyTech</h3>
+
+                    <p>
+                        Solution e-commerce développée avec un backend
+                        Java Spring Boot et une interface web Angular.
+                    </p>
+
+                    <div class="project-technologies">
+                        <span>Java</span>
+                        <span>Spring Boot</span>
+                        <span>Angular</span>
+                        <span>MySQL</span>
+                    </div>
+                </div>
+
+            </article>
+
+
+            <article class="my-project">
+
+                <div class="my-project-image">
+                    <img
+                        src="{% static 'website/images/projects/th (3).jpg' %}"
+                        alt="Miss Digital Tech"
+                    >
+                </div>
+
+                <div class="my-project-content">
+                    <span class="project-index">04</span>
+                    <span class="project-type">SITE WEB · PROJET PERSONNEL</span>
+
+                    <h3>Miss Digital Tech</h3>
+
+                    <p>
+                        Site officiel de Miss Digital Tech, conçu et développé
+                        pour présenter l'agence, ses expertises,
+                        son univers et ses services.
+                    </p>
+
+                    <div class="project-technologies">
+                        <span>Django</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+
+            </article>
+
+
+            <article class="my-project">
+
+                <div class="my-project-image">
+                    <img
+                        src="{% static 'website/images/projects/th (1).jpg' %}"
+                        alt="Fallou Store"
+                    >
+                </div>
+
+                <div class="my-project-content">
+                    <span class="project-index">05</span>
+                    <span class="project-type">BOUTIQUE EN LIGNE</span>
+
+                    <h3>Fallou Store</h3>
+
+                    <p>
+                        Boutique en ligne développée avec Django pour
+                        présenter des parfums, accessoires technologiques
+                        et produits disponibles à la vente.
+                    </p>
+
+                    <div class="project-technologies">
+                        <span>Django</span>
+                        <span>Python</span>
+                        <span>MySQL</span>
+                        <span>E-commerce</span>
+                    </div>
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+
+<section class="my-portfolio-cta">
+
+    <div class="container">
+
+        <span>UN PROJET EN TÊTE ?</span>
+
+        <h2>
+            Construisons<br>
+            quelque chose d'utile.
+        </h2>
+
+        <p>
+            Vous avez une idée, un besoin ou un projet numérique ?
+            Parlons-en.
+        </p>
+
+        <a href="{% url 'contact' %}" class="md-btn md-btn-dark">
+            Me contacter
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}

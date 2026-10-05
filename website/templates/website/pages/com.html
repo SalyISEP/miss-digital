@@ -1,0 +1,100 @@
+{% extends "website/base.html" %}
+{% load static %}
+
+{% block title %}MDT Com — Miss Digital Tech{% endblock %}
+
+{% block content %}
+
+<section class="service-hero">
+    <div class="container">
+        <span>MDT COM</span>
+
+        <h1>Donner du sens<br>à votre communication.</h1>
+
+        <p>
+            Nous créons des identités, contenus et stratégies de
+            communication qui permettent aux marques de mieux se
+            présenter, mieux communiquer et mieux se développer.
+        </p>
+    </div>
+</section>
+
+
+<section class="service-content">
+    <div class="container">
+
+        <div class="service-intro">
+            <span>NOTRE APPROCHE</span>
+
+            <h2>Une communication claire, élégante et cohérente.</h2>
+
+            <p>
+                Chaque marque possède une histoire. Notre rôle est de
+                la traduire en une communication professionnelle,
+                reconnaissable et adaptée à son public.
+            </p>
+        </div>
+
+
+        <div class="service-grid">
+
+            <article>
+                <span>01</span>
+                <h3>Identité visuelle</h3>
+                <p>
+                    Création et harmonisation de l'image de votre
+                    entreprise pour construire une identité cohérente.
+                </p>
+            </article>
+
+            <article>
+                <span>02</span>
+                <h3>Communication digitale</h3>
+                <p>
+                    Présence digitale, contenus et accompagnement
+                    pour développer votre visibilité en ligne.
+                </p>
+            </article>
+
+            <article>
+                <span>03</span>
+                <h3>Création de contenus</h3>
+                <p>
+                    Supports visuels et contenus adaptés à votre
+                    activité, vos objectifs et votre audience.
+                </p>
+            </article>
+
+            <article>
+                <span>04</span>
+                <h3>Stratégie</h3>
+                <p>
+                    Une réflexion structurée pour faire de votre
+                    communication un véritable outil de développement.
+                </p>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+
+<section class="service-cta">
+    <div class="container">
+
+        <span>VOTRE IMAGE</span>
+
+        <h2>
+            Faisons de votre identité<br>
+            une véritable signature.
+        </h2>
+
+        <a href="{% url 'contact' %}" class="md-btn md-btn-dark">
+            Parler de votre communication
+        </a>
+
+    </div>
+</section>
+
+{% endblock %}

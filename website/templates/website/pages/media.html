@@ -1,0 +1,96 @@
+{% extends "website/base.html" %}
+
+{% block title %}MDT Media — Miss Digital Tech{% endblock %}
+
+{% block content %}
+
+<section class="service-hero">
+    <div class="container">
+        <span>MDT MEDIA</span>
+
+        <h1>Raconter vos moments<br>avec impact.</h1>
+
+        <p>
+            Nous accompagnons les événements, entreprises et projets
+            qui souhaitent conserver, partager et valoriser leurs
+            moments importants à travers l'image et le contenu.
+        </p>
+    </div>
+</section>
+
+<section class="service-content">
+    <div class="container">
+
+        <div class="service-intro">
+            <span>IMAGE & ÉVÉNEMENT</span>
+
+            <h2>Créer des souvenirs qui restent.</h2>
+
+            <p>
+                Notre approche associe créativité, présence sur le
+                terrain et qualité de présentation pour donner une
+                véritable valeur à vos événements et communications.
+            </p>
+        </div>
+
+        <div class="service-grid">
+
+            <article>
+                <span>01</span>
+                <h3>Couverture événementielle</h3>
+                <p>
+                    Présence et création de contenus autour de vos
+                    événements professionnels ou privés.
+                </p>
+            </article>
+
+            <article>
+                <span>02</span>
+                <h3>Photo & vidéo</h3>
+                <p>
+                    Capturer les moments essentiels et les transformer
+                    en contenus exploitables.
+                </p>
+            </article>
+
+            <article>
+                <span>03</span>
+                <h3>Contenu digital</h3>
+                <p>
+                    Des contenus pensés pour prolonger la visibilité
+                    de votre événement au-delà du jour J.
+                </p>
+            </article>
+
+            <article>
+                <span>04</span>
+                <h3>Valorisation</h3>
+                <p>
+                    Donner une seconde vie aux images et contenus
+                    pour renforcer votre communication.
+                </p>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="service-cta">
+    <div class="container">
+
+        <span>VOTRE ÉVÉNEMENT</span>
+
+        <h2>
+            Faisons de votre événement<br>
+            une expérience mémorable.
+        </h2>
+
+        <a href="{% url 'contact' %}" class="md-btn md-btn-dark">
+            Préparer mon événement
+        </a>
+
+    </div>
+</section>
+
+{% endblock %}

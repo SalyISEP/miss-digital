@@ -1,0 +1,196 @@
+{% extends "website/base.html" %}
+
+{% block title %}Réserver — Miss Digital{% endblock %}
+
+{% block content %}
+
+<section class="reservation-hero">
+    <div class="container">
+
+        <span>PRENDRE CONTACT</span>
+
+        <h1>
+            Parlons de<br>
+            votre projet.
+        </h1>
+
+        <p>
+            Décrivez votre besoin et transmettez-nous les premières
+            informations. Nous reviendrons vers vous pour échanger
+            sur la suite.
+        </p>
+
+    </div>
+</section>
+
+<section class="reservation-section">
+    <div class="container">
+
+        <div class="reservation-layout">
+
+            <div class="reservation-intro">
+
+                <span>VOTRE DEMANDE</span>
+
+                <h2>
+                    Quelques informations
+                    pour commencer.
+                </h2>
+
+                <p>
+                    Que vous souhaitiez créer un site, développer une
+                    solution numérique, suivre une formation, organiser
+                    une communication ou proposer une collaboration,
+                    utilisez ce formulaire pour nous contacter.
+                </p>
+
+                <div class="reservation-note">
+                    <strong>MISS DIGITAL</strong>
+                    <span>
+                        Nous étudierons votre demande avec attention
+                        et vous contacterons prochainement.
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="reservation-form-wrapper">
+
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="reservation-success">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+
+                <form method="post" class="reservation-form">
+                    {% csrf_token %}
+
+                    {% if form.non_field_errors %}
+                        <div class="form-errors">
+                            {{ form.non_field_errors }}
+                        </div>
+                    {% endif %}
+
+                    <div class="form-group">
+                        <label for="{{ form.nom.id_for_label }}">
+                            Nom complet
+                        </label>
+                        {{ form.nom }}
+                        {{ form.nom.errors }}
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="{{ form.telephone.id_for_label }}">
+                                Téléphone
+                            </label>
+                            {{ form.telephone }}
+                            {{ form.telephone.errors }}
+                        </div>
+
+                        <div class="form-group">
+                            <label for="{{ form.email.id_for_label }}">
+                                Email
+                            </label>
+                            {{ form.email }}
+                            {{ form.email.errors }}
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="{{ form.type_demande.id_for_label }}">
+                            Type de demande
+                        </label>
+                        {{ form.type_demande }}
+                        {{ form.type_demande.errors }}
+                    </div>
+
+                    <div id="formation-fields" class="conditional-fields">
+                        <div class="form-group">
+                            <label for="{{ form.formation.id_for_label }}">
+                                Formation souhaitée
+                            </label>
+                            {{ form.formation }}
+                        </div>
+                    </div>
+
+                    <div id="partnership-fields" class="conditional-fields">
+
+                        <div class="form-group">
+                            <label for="{{ form.organisation.id_for_label }}">
+                                Organisation
+                            </label>
+                            {{ form.organisation }}
+                        </div>
+
+                        <div class="form-group">
+                            <label for="{{ form.type_partenariat.id_for_label }}">
+                                Type de partenariat
+                            </label>
+                            {{ form.type_partenariat }}
+                        </div>
+
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="{{ form.date_souhaitee.id_for_label }}">
+                                Date souhaitée
+                            </label>
+                            {{ form.date_souhaitee }}
+                        </div>
+
+                        <div class="form-group">
+                            <label for="{{ form.mode.id_for_label }}">
+                                Mode
+                            </label>
+                            {{ form.mode }}
+                        </div>
+
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="{{ form.nombre_participants.id_for_label }}">
+                                Nombre de participants
+                            </label>
+                            {{ form.nombre_participants }}
+                        </div>
+
+                        <div class="form-group">
+                            <label for="{{ form.budget.id_for_label }}">
+                                Budget indicatif
+                            </label>
+                            {{ form.budget }}
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="{{ form.message.id_for_label }}">
+                            Votre message
+                        </label>
+                        {{ form.message }}
+                        {{ form.message.errors }}
+                    </div>
+
+                    <button type="submit" class="md-btn md-btn-dark reservation-submit">
+                        Envoyer ma demande
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

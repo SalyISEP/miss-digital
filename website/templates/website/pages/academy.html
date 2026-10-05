@@ -1,0 +1,95 @@
+{% extends "website/base.html" %}
+
+{% block title %}MDT Academy — Miss Digital Tech{% endblock %}
+
+{% block content %}
+
+<section class="service-hero">
+    <div class="container">
+        <span>MDT ACADEMY</span>
+
+        <h1>Apprendre.<br>Pratiquer. Évoluer.</h1>
+
+        <p>
+            MDT Academy accompagne les étudiants, professionnels,
+            entrepreneurs et organisations dans le développement
+            de leurs compétences numériques et professionnelles.
+        </p>
+    </div>
+</section>
+
+<section class="service-content">
+    <div class="container">
+
+        <div class="service-intro">
+            <span>TRANSMISSION & COMPÉTENCES</span>
+
+            <h2>Des compétences utiles pour le monde réel.</h2>
+
+            <p>
+                Nous privilégions une approche pratique, accessible
+                et directement orientée vers les besoins du terrain.
+            </p>
+        </div>
+
+        <div class="service-grid">
+
+            <article>
+                <span>01</span>
+                <h3>Formation numérique</h3>
+                <p>
+                    Initiation et perfectionnement autour des outils
+                    numériques et des nouvelles technologies.
+                </p>
+            </article>
+
+            <article>
+                <span>02</span>
+                <h3>Développement web</h3>
+                <p>
+                    Acquisition des bases nécessaires pour comprendre
+                    et construire des solutions web.
+                </p>
+            </article>
+
+            <article>
+                <span>03</span>
+                <h3>Bureautique & outils</h3>
+                <p>
+                    Maîtrise des outils indispensables à l'organisation
+                    et à la productivité professionnelle.
+                </p>
+            </article>
+
+            <article>
+                <span>04</span>
+                <h3>Ateliers pratiques</h3>
+                <p>
+                    Des exercices et projets permettant de transformer
+                    les connaissances en compétences concrètes.
+                </p>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="service-cta">
+    <div class="container">
+
+        <span>MDT ACADEMY</span>
+
+        <h2>
+            Investir dans les compétences,<br>
+            c'est préparer l'avenir.
+        </h2>
+
+        <a href="{% url 'contact' %}" class="md-btn md-btn-dark">
+            Découvrir les formations
+        </a>
+
+    </div>
+</section>
+
+{% endblock %}

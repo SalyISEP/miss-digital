@@ -1,0 +1,97 @@
+{% extends "website/base.html" %}
+{% load static %}
+
+{% block title %}MDT Tech — Miss Digital Tech{% endblock %}
+
+{% block content %}
+
+<section class="service-hero">
+    <div class="container">
+        <span>MDT TECH</span>
+
+        <h1>La technologie<br>au service de vos ambitions.</h1>
+
+        <p>
+            Nous concevons des sites web, applications et solutions
+            numériques adaptées aux besoins réels des entreprises,
+            organisations et entrepreneurs.
+        </p>
+    </div>
+</section>
+
+
+<section class="service-content">
+    <div class="container">
+
+        <div class="service-intro">
+            <span>NOTRE SAVOIR-FAIRE</span>
+
+            <h2>Transformer un besoin en solution.</h2>
+
+            <p>
+                De l'idée à la mise en ligne, Miss Digital Tech accompagne
+                chaque projet avec une approche simple, structurée
+                et orientée résultat.
+            </p>
+        </div>
+
+
+        <div class="service-grid">
+
+            <article>
+                <span>01</span>
+                <h3>Sites web</h3>
+                <p>
+                    Sites vitrines, plateformes professionnelles
+                    et expériences web adaptées à votre activité.
+                </p>
+            </article>
+
+            <article>
+                <span>02</span>
+                <h3>Applications</h3>
+                <p>
+                    Développement de solutions de gestion et
+                    d'applications répondant à vos besoins métier.
+                </p>
+            </article>
+
+            <article>
+                <span>03</span>
+                <h3>Solutions numériques</h3>
+                <p>
+                    Digitalisation des processus pour simplifier
+                    le travail et améliorer l'organisation.
+                </p>
+            </article>
+
+            <article>
+                <span>04</span>
+                <h3>Accompagnement</h3>
+                <p>
+                    Analyse du besoin, conseil, évolution et
+                    accompagnement de votre projet numérique.
+                </p>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+
+<section class="service-cta">
+    <div class="container">
+
+        <span>VOTRE PROJET</span>
+
+        <h2>Construisons quelque chose<br>qui vous ressemble.</h2>
+
+        <a href="{% url 'contact' %}" class="md-btn md-btn-dark">
+            Présenter mon projet
+        </a>
+
+    </div>
+</section>
+
+{% endblock %}

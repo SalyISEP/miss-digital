@@ -1,0 +1,95 @@
+{% extends "website/base.html" %}
+
+{% block title %}MDT Print — Miss Digital Tech{% endblock %}
+
+{% block content %}
+
+<section class="service-hero">
+    <div class="container">
+        <span>MDT PRINT</span>
+
+        <h1>Des supports qui<br>portent votre image.</h1>
+
+        <p>
+            Nous concevons des supports de communication imprimés,
+            élégants et cohérents avec l'identité de votre marque.
+        </p>
+    </div>
+</section>
+
+<section class="service-content">
+    <div class="container">
+
+        <div class="service-intro">
+            <span>CRÉATION & IMPRESSION</span>
+
+            <h2>Votre identité, jusque dans les détails.</h2>
+
+            <p>
+                Cartes, flyers, affiches, supports professionnels :
+                chaque élément est pensé pour présenter votre activité
+                avec cohérence et professionnalisme.
+            </p>
+        </div>
+
+        <div class="service-grid">
+
+            <article>
+                <span>01</span>
+                <h3>Cartes professionnelles</h3>
+                <p>
+                    Des cartes élégantes pour représenter votre
+                    entreprise et faciliter les échanges.
+                </p>
+            </article>
+
+            <article>
+                <span>02</span>
+                <h3>Flyers & affiches</h3>
+                <p>
+                    Des supports visuels conçus pour informer,
+                    promouvoir et attirer l'attention.
+                </p>
+            </article>
+
+            <article>
+                <span>03</span>
+                <h3>Supports professionnels</h3>
+                <p>
+                    Documents et supports adaptés à votre
+                    communication institutionnelle et commerciale.
+                </p>
+            </article>
+
+            <article>
+                <span>04</span>
+                <h3>Accompagnement graphique</h3>
+                <p>
+                    Une cohérence visuelle de la conception
+                    jusqu'au support final.
+                </p>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="service-cta">
+    <div class="container">
+
+        <span>MDT PRINT</span>
+
+        <h2>
+            Donnez une présence<br>
+            tangible à votre marque.
+        </h2>
+
+        <a href="{% url 'contact' %}" class="md-btn md-btn-dark">
+            Demander un devis
+        </a>
+
+    </div>
+</section>
+
+{% endblock %}

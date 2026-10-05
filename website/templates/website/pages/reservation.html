@@ -1,0 +1,187 @@
+{% extends "website/base.html" %}
+
+{% block title %}Réserver une formation — MDT Academy{% endblock %}
+
+{% block content %}
+
+<section class="reservation-page">
+
+    <div class="container">
+
+        <div class="reservation-intro">
+
+            <span>MDT ACADEMY</span>
+
+            <h1>
+                Réserver une<br>
+                <strong>formation.</strong>
+            </h1>
+
+            <p>
+                Choisissez la formation qui correspond à vos objectifs
+                et envoyez votre demande d'inscription. Notre équipe
+                vous contactera ensuite pour échanger avec vous
+                sur les modalités.
+            </p>
+
+        </div>
+
+        <div class="reservation-box">
+
+            {% if success %}
+
+                <div class="reservation-success">
+
+                    <span>✓</span>
+
+                    <div>
+                        <h2>Demande reçue.</h2>
+
+                        <p>
+                            Merci pour votre demande de réservation.
+                            Miss Digital Tech vous contactera prochainement
+                            pour confirmer votre inscription.
+                        </p>
+                    </div>
+
+                </div>
+
+            {% else %}
+
+                <form method="post" class="reservation-form">
+
+                    {% csrf_token %}
+
+                    <div class="reservation-row">
+
+                        <div class="reservation-field">
+
+                            <label for="name">
+                                Nom complet
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Votre nom complet"
+                                required>
+
+                        </div>
+
+                        <div class="reservation-field">
+
+                            <label for="email">
+                                E-mail
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="votre@email.com"
+                                required>
+
+                        </div>
+
+                    </div>
+
+                    <div class="reservation-row">
+
+                        <div class="reservation-field">
+
+                            <label for="phone">
+                                Téléphone
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="+221 XX XXX XX XX"
+                                required>
+
+                        </div>
+
+                        <div class="reservation-field">
+
+                            <label for="formation">
+                                Formation souhaitée
+                            </label>
+
+                            <select
+                                id="formation"
+                                name="formation"
+                                required>
+
+                                <option value="">
+                                    Choisir une formation
+                                </option>
+
+                                <option value="developpement-web">
+                                    Développement Web
+                                </option>
+
+                                <option value="bureautique">
+                                    Bureautique
+                                </option>
+
+                                <option value="ia">
+                                    Intelligence Artificielle
+                                </option>
+
+                                <option value="cybersecurite">
+                                    Cybersécurité
+                                </option>
+
+                                <option value="marketing">
+                                    Marketing & Communication
+                                </option>
+
+                                <option value="autre">
+                                    Autre formation
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                    <div class="reservation-field">
+
+                        <label for="message">
+                            Informations complémentaires
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            placeholder="Votre niveau, vos objectifs ou toute information utile..."></textarea>
+
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="reservation-submit">
+
+                        <span>
+                            Envoyer ma réservation
+                        </span>
+
+                        <strong>→</strong>
+
+                    </button>
+
+                </form>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
