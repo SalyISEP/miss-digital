@@ -43,7 +43,7 @@ ALLOWED_HOSTS = [
     host.strip()
     for host in os.getenv(
         "ALLOWED_HOSTS",
-        "127.0.0.1,localhost"
+        "127.0.0.1,localhost,miss-digital.onrender.com,missdigital.sn,www.missdigital.sn,missdigital.com,www.missdigital.com"
     ).split(",")
     if host.strip()
 ]
